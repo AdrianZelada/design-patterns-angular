@@ -5,9 +5,10 @@ import { FactoryCp1Component } from './factory-cp1/factory-cp1.component';
 import { FactoryCp2Component } from './factory-cp2/factory-cp2.component';
 import {FactoryRoutingModule} from './factory-routing.module';
 import {SERVICE_COMPONENT_1, SERVICE_COMPONENT_2} from './factory.service';
+import { ParentCpComponent } from './parent-cp/parent-cp.component';
 
 @NgModule({
-  declarations: [FactoryMainComponent, FactoryCp1Component, FactoryCp2Component],
+  declarations: [FactoryMainComponent, FactoryCp1Component, FactoryCp2Component, ParentCpComponent],
   imports: [
     CommonModule,
     FactoryRoutingModule

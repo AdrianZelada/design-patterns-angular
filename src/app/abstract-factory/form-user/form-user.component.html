@@ -1,0 +1,14 @@
+<h1>Form User</h1>
+<form action="" [formGroup]="form">
+  <div class="form-group">
+    <label >Name</label>
+    <input type="text" class="form-control" formControlName="name" >
+  </div>
+  <div class="form-group">
+    <label>Last Name</label>
+    <input type="text" class="form-control" formControlName="lastName">
+  </div>
+
+  <button type="button" class="btn btn-secondary" (click)="sendForm()">send</button>
+
+</form>
