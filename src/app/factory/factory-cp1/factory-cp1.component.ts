@@ -15,7 +15,7 @@ import {ParentCpComponent} from '../parent-cp/parent-cp.component';
   ]
 })
 export class FactoryCp1Component extends ParentCpComponent {
-  constructor(private factoryService: FactoryService) {
+  constructor(public factoryService: FactoryService) {
     super(factoryService);
   }
 }

@@ -8,9 +8,20 @@ import {STORE_SERVICE, USER_SERVICE} from './abstract-factory';
 import {AbstractFactoryRoutingModule} from './abstract-factory-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormService} from './form.service';
+
+
+const USER_SERVICE_VAL:any = {
+  name: 'USER_SERVICE'
+};
+const STORE_SERVICE_VAL:any = {
+  name: 'STORE_SERVICE'
+};
 
 @NgModule({
+  // declarations: [AbstractFactoryComponent],
   declarations: [AbstractFactoryComponent, ParentFormComponent, FormUserComponent, FormStoreComponent],
+  // declarations: [AbstractFactoryComponent],
   imports: [
     CommonModule,
     AbstractFactoryRoutingModule,
@@ -24,7 +35,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     },
     {
       provide: STORE_SERVICE, useValue: 'STORE_SERVICE'
-    }
+    },
+    // FormService
   ]
 })
 export class AbstractFactoryModule { }

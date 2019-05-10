@@ -20,7 +20,7 @@ export class FactoryCp2Component extends ParentCpComponent {
   // resultsCp2: any;
   // resultCustom: number = 0;
   // msgCommon: string = '';
-  constructor(private factoryService: FactoryService) {
+  constructor(public factoryService: FactoryService) {
     super(factoryService);
   }
 

@@ -11,7 +11,7 @@ export class ParentCpComponent implements OnInit {
   resultsSubscribe: any;
   resultCustom: number = 0;
   msgCommon: string = '';
-  constructor(private factoryService: FactoryService) { }
+  constructor(public factoryService: FactoryService) { }
 
   ngOnInit() {
     this.factoryService.seeResult$.subscribe((data) => {
@@ -27,3 +27,4 @@ export class ParentCpComponent implements OnInit {
     this.msgCommon = this.factoryService.commonAction(20);
   }
 }
+
