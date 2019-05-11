@@ -18,14 +18,19 @@ import {ParentFormComponent} from '../parent-form/parent-form.component';
     }
   ]
 })
-export class FormStoreComponent extends ParentFormComponent implements OnInit{
+export class FormStoreComponent extends ParentFormComponent implements OnInit {
 
-  constructor(formService: FormService, fb: FormBuilder) {
+  constructor(public formService: FormService, public fb: FormBuilder) {
     super(formService, fb);
     this.form = fb.group({
       nameStore: new FormControl(''),
       address: new FormControl(''),
       phone: new FormControl(''),
     });
+  }
+
+  sendForm() {
+    console.log('asdasdasdas');
+    super.sendForm();
   }
 }

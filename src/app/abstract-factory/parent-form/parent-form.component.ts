@@ -11,7 +11,7 @@ export class ParentFormComponent implements OnInit {
 
   form: FormGroup;
   responseForm: any = {};
-  constructor(private formService: FormService, private fb: FormBuilder) { }
+  constructor(public formService: FormService, public fb: FormBuilder) { }
 
   ngOnInit() {
   }

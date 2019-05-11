@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'abstract-form',
     loadChildren: './abstract-factory/abstract-factory.module#AbstractFactoryModule'
+  },
+  {
+    path: 'dynamic-provider',
+    loadChildren: './dynamic-provider/dynamic-provider.module#DynamicProviderModule'
   }
 ];
 

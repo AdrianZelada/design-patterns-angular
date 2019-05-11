@@ -19,7 +19,7 @@ import {FormBuilder, FormControl} from '@angular/forms';
 })
 export class FormUserComponent extends ParentFormComponent {
 
-  constructor(formService: FormService, fb: FormBuilder) {
+  constructor(public formService: FormService, public fb: FormBuilder) {
     super(formService, fb);
     this.form = fb.group({
       name: new FormControl(''),

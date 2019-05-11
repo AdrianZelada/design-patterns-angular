@@ -1,13 +1,28 @@
-<h1>Form User</h1>
+<h5>Form User</h5>
 <form action="" [formGroup]="form">
-  <div class="form-group">
-    <label >Name</label>
-    <input type="text" class="form-control" formControlName="name" >
+
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Name</span>
+    </div>
+    <input formControlName="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
   </div>
-  <div class="form-group">
-    <label>Last Name</label>
-    <input type="text" class="form-control" formControlName="lastName">
+
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Last Name</span>
+    </div>
+    <input formControlName="lastName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
   </div>
+
+  <!--<div class="form-group">-->
+    <!--<label >Name</label>-->
+    <!--<input type="text" class="form-control small" formControlName="name" >-->
+  <!--</div>-->
+  <!--<div class="form-group">-->
+    <!--<label>Last Name</label>-->
+    <!--<input type="text" class="form-control small" formControlName="lastName">-->
+  <!--</div>-->
 
   <button type="button" class="btn btn-secondary" (click)="sendForm()">send</button>
 
