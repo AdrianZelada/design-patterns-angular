@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import {Observable, of, Subject} from 'rxjs';
-// import {AbstractFactory} from './abstract-factory';
-
 
 abstract class AbstractFactory {
   constructor() {}
@@ -19,9 +17,7 @@ abstract class AbstractFactory {
   }
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class FormService extends AbstractFactory {
 
   seeResult: Subject<any> = new Subject();
@@ -31,6 +27,7 @@ export class FormService extends AbstractFactory {
   }
 
   send(data: any): Observable<any> {
+    console.log('FormService');
     return of(data);
   }
 }

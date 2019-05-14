@@ -1,8 +1,6 @@
 <h5>Form Store</h5>
 
 <form action="" [formGroup]="form">
-
-
   <div class="input-group input-group-sm mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text">Name Store</span>
@@ -23,6 +21,10 @@
     </div>
     <input formControlName="phone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
   </div>
-  <button type="button" class="btn btn-primary" (click)="sendForm()">send</button>
 
+  <button type="button" class="btn btn-primary" (click)="sendForm()">send</button>
 </form>
+
+<code>
+  {{responseForm | json}}
+</code>

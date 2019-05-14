@@ -15,15 +15,9 @@
     <input formControlName="lastName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
   </div>
 
-  <!--<div class="form-group">-->
-    <!--<label >Name</label>-->
-    <!--<input type="text" class="form-control small" formControlName="name" >-->
-  <!--</div>-->
-  <!--<div class="form-group">-->
-    <!--<label>Last Name</label>-->
-    <!--<input type="text" class="form-control small" formControlName="lastName">-->
-  <!--</div>-->
-
   <button type="button" class="btn btn-secondary" (click)="sendForm()">send</button>
-
 </form>
+
+<code>
+  {{responseForm | json}}
+</code>

@@ -30,7 +30,6 @@ export class FormStoreComponent extends ParentFormComponent implements OnInit {
   }
 
   sendForm() {
-    console.log('asdasdasdas');
     super.sendForm();
   }
 }
