@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ListTaskComponent } from './list-task/list-task.component';
+import {CreationalRoutingModule} from './creational-routing.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [ListTaskComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    CreationalRoutingModule
   ]
 })
 export class CreationalModule { }

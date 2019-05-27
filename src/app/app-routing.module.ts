@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'dynamic-provider',
     loadChildren: './dynamic-provider/dynamic-provider.module#DynamicProviderModule'
+  },
+  {
+    path: 'creational',
+    loadChildren: './creational/creational.module#CreationalModule'
   }
 ];
 
