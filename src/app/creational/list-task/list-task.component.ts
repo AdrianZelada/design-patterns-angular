@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TaskData} from './tasks';
 import {FactoryClass} from '../factory-class/factory-class';
+import {ComunicationService} from '../comunication.service';
 
 @Component({
   selector: 'app-list-task',
@@ -9,18 +10,29 @@ import {FactoryClass} from '../factory-class/factory-class';
 })
 export class ListTaskComponent implements OnInit {
 
-  listTask: Array<any> = []
-  constructor() { }
+  listTask: Array<any> = [];
+  current: any = {};
+  constructor(private factory: FactoryClass, private comunicationService: ComunicationService) { }
 
   ngOnInit() {
-    const factory = new FactoryClass();
+    // const factory = new FactoryClass();
     this.listTask = TaskData.map((item) => {
-      return factory.createItem(item.type, item);
+      return this.factory.createItem(item.type, item);
     });
+
+    this.comunicationService.data$.subscribe((data) => {
+      this.current = data;
+    })
   }
 
   details(item) {
     item.log();
+  }
+
+  changeData() {
+    this.current.update({
+      title: Date.now()
+    });
   }
 
 }

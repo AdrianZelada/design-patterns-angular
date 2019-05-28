@@ -1,5 +1,7 @@
+import {ComunicationService} from '../comunication.service';
+
 export class NoteTodo {
-  constructor(data) {
+  constructor(data, private comunicationService: ComunicationService) {
     this.assign(data);
   }
 
@@ -11,5 +13,12 @@ export class NoteTodo {
   log() {
     console.log('NoteTodo');
     console.log(this);
+    this.comunicationService.setData(this);
+  }
+
+  update(data) {
+    let _this = this;
+    console.log('NoteTodo');
+    Object.assign(_this, data);
   }
 }

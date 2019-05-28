@@ -1,5 +1,7 @@
+import {ComunicationService} from '../comunication.service';
+
 export class TaskTodo {
-  constructor(data) {
+  constructor(data, private comunicationService: ComunicationService) {
     this.assign(data);
   }
 
@@ -11,5 +13,12 @@ export class TaskTodo {
   log() {
     console.log('TaskTodo');
     console.log(this);
+    this.comunicationService.setData(this);
+  }
+
+  update(data) {
+    let _this = this;
+    console.log('TaskTodo');
+    Object.assign(_this, data);
   }
 }
